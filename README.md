@@ -1,4 +1,4 @@
-# Jaipur Software Employers Directory
+# Jaipur Software Job Directory
 
 A lightweight static website that lists Jaipur-based software employers and helps users quickly filter, compare, and explore companies by category, role fit, and evidence quality.
 
