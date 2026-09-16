@@ -2,6 +2,8 @@
 
 A lightweight static website that lists Jaipur-based software employers and helps users quickly filter, compare, and explore companies by category, role fit, and evidence quality.
 
+Live demo: https://jaipur-job-directory.vercel.app/
+
 ## Overview
 
 This project presents a curated shortlist of software employers operating in Jaipur, India. It includes:
