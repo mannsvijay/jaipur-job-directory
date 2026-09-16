@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaipur software employers — a verified shortlist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f5f5f7;
+  --card: #ffffff;
+  --ink: #1b1b21;
+  --ink-soft: #5c5c69;
+  --rule: #dcdce3;
+  --rose: #a62a55;
+  --rose-soft: #f6e6ec;
+  --teal: #0d6159;
+  --teal-soft: #e2efec;
+  --amber: #8a5a05;
+  --amber-soft: #f7ecd8;
+}
+:root:not([data-theme="light"]) { }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #131317;
+    --card: #1b1b21;
+    --ink: #e9e9ee;
+    --ink-soft: #a0a0ad;
+    --rule: #33333d;
+    --rose: #f08aab;
+    --rose-soft: #3a1f2a;
+    --teal: #6fcfc0;
+    --teal-soft: #17302c;
+    --amber: #e5b866;
+    --amber-soft: #332a17;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #131317;
+  --card: #1b1b21;
+  --ink: #e9e9ee;
+  --ink-soft: #a0a0ad;
+  --rule: #33333d;
+  --rose: #f08aab;
+  --rose-soft: #3a1f2a;
+  --teal: #6fcfc0;
+  --teal-soft: #17302c;
+  --amber: #e5b866;
+  --amber-soft: #332a17;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px; line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px 80px; }
+h1, h2, h3 { font-family: Newsreader, Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.12; margin: 0 0 14px; }
+h2 { font-size: clamp(22px, 3vw, 28px); margin: 56px 0 8px; }
+h3 { font-size: 18px; margin: 28px 0 6px; }
+p { max-width: 68ch; }
+a { color: var(--rose); }
+a:focus-visible, input:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
+
+header.hero { padding: 54px 0 8px; }
+.kicker { font-family: Newsreader, Georgia, serif; font-style: italic; color: var(--ink-soft); font-size: 17px; margin: 0 0 18px; }
+.lede { font-family: Newsreader, Georgia, serif; font-size: 19px; line-height: 1.6; color: var(--ink); }
+
+.tally { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 8px; }
+.tally div { background: var(--card); border: 1px solid var(--rule); border-radius: 3px; padding: 10px 14px; }
+.tally b { font-family: Newsreader, Georgia, serif; font-size: 26px; font-weight: 600; display: block; line-height: 1.1; }
+.tally span { font-size: 12.5px; color: var(--ink-soft); }
+
+.flag { border-left: 3px solid var(--rose); background: var(--rose-soft); padding: 16px 18px; margin: 30px 0; border-radius: 0 3px 3px 0; }
+.flag p { margin: 0 0 10px; }
+.flag p:last-child { margin-bottom: 0; }
+
+.ladder { border: 1px solid var(--rule); background: var(--card); border-radius: 3px; padding: 4px 18px 14px; margin: 26px 0; }
+.ladder dl { margin: 0; }
+.ladder dt { font-weight: 600; margin-top: 14px; font-size: 13.5px; }
+.ladder dd { margin: 2px 0 0; color: var(--ink-soft); font-size: 13.5px; max-width: 72ch; }
+.code { display: inline-block; min-width: 20px; text-align: center; background: var(--teal-soft); color: var(--teal); border-radius: 2px; padding: 0 5px; margin-right: 8px; font-weight: 600; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 22px 0 4px; position: sticky; top: 0; background: var(--paper); padding: 12px 0; z-index: 5; border-bottom: 1px solid var(--rule); }
+.controls input { flex: 1 1 240px; min-width: 0; padding: 9px 12px; border: 1px solid var(--rule); border-radius: 3px; background: var(--card); color: var(--ink); font: inherit; font-size: 14px; }
+.controls button { padding: 9px 13px; border: 1px solid var(--rule); background: var(--card); color: var(--ink-soft); border-radius: 3px; font: inherit; font-size: 13px; cursor: pointer; }
+.controls button[aria-pressed="true"] { background: var(--rose); border-color: var(--rose); color: #fff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .controls button[aria-pressed="true"] { color: #1b1b21; } }
+.count { font-size: 13px; color: var(--ink-soft); }
+
+.tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 3px; background: var(--card); margin: 14px 0 0; }
+table { border-collapse: collapse; width: 100%; min-width: 900px; font-size: 13.5px; }
+th { text-align: left; font-weight: 600; font-size: 12.5px; color: var(--ink-soft); padding: 11px 12px; border-bottom: 1px solid var(--rule); background: var(--card); white-space: nowrap; }
+td { padding: 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr.hidden { display: none; }
+.num { color: var(--ink-soft); font-variant-numeric: tabular-nums; width: 34px; }
+.co { min-width: 230px; }
+.co-name { display: block; font-weight: 600; }
+.co-note { display: block; color: var(--ink-soft); font-size: 12.5px; margin-top: 3px; max-width: 42ch; }
+.roles { min-width: 200px; max-width: 280px; }
+.ev { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; color: var(--ink-soft); white-space: nowrap; }
+.fit { display: inline-block; padding: 2px 8px; border-radius: 2px; font-size: 12px; font-weight: 500; white-space: nowrap; }
+.fit-hi { background: var(--teal-soft); color: var(--teal); }
+.fit-mid { background: var(--amber-soft); color: var(--amber); }
+.fit-lo { background: var(--rule); color: var(--ink-soft); }
+.links { white-space: nowrap; }
+.links a { display: inline-block; margin-right: 10px; font-size: 12.5px; text-decoration: none; border-bottom: 1px solid currentColor; }
+.links a:last-child { margin-right: 0; }
+
+ol.picks { columns: 2; column-gap: 34px; padding-left: 22px; }
+ol.picks li { break-inside: avoid; margin-bottom: 6px; }
+ol.picks a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+ul.cold { list-style: none; padding: 0; }
+ul.cold li { border-bottom: 1px solid var(--rule); padding: 11px 0; }
+ul.cold a { font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
+ul.cold span { display: block; color: var(--ink-soft); font-size: 13.5px; margin-top: 3px; max-width: 70ch; }
+@media (max-width: 620px) { ol.picks { columns: 1; } }
+
+.steps { counter-reset: s; list-style: none; padding: 0; }
+.steps li { counter-increment: s; position: relative; padding-left: 34px; margin-bottom: 14px; max-width: 70ch; }
+.steps li::before { content: counter(s); position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border-radius: 50%; background: var(--rose-soft); color: var(--rose); font-size: 12px; font-weight: 600; display: grid; place-items: center; }
+footer { margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="kicker">Jaipur software employers, researched September 2026</p>
+  <h1>113 companies with a real Jaipur presence — not 150</h1>
+  <p class="lede">You asked for 150 and said accuracy matters more than filling gaps. Holding to that, this list stops at 113. Everything below cleared the test you set: the company itself is in Jaipur, not merely visible to someone searching from Jaipur. Every row also carries the evidence it rests on, so you can see exactly how much weight it holds.</p>
+
+  <div class="tally">
+    <div><b>25</b><span>Tier 1 — product &amp; strong tech</span></div>
+    <div><b>49</b><span>Tier 2 — established IT services</span></div>
+    <div><b>39</b><span>Tier 3 — startups &amp; small tech</span></div>
+    <div><b>0</b><span>fabricated HR emails</span></div>
+  </div>
+</header>
+
+<div class="flag">
+  <p><strong>Two gaps you should know about before using this.</strong></p>
+  <p><strong>Live hiring status is not verified per company.</strong> Confirming "currently hiring" for 113 companies means opening 113 careers pages and job boards on the same day, and that check expires within about a week. Rather than print a status column that would be stale or guessed, every row links to a live careers search and a LinkedIn Jaipur jobs search for that exact company. Those return today's real answer in one click. The companies where a specific Jaipur posting was actually seen during this research are marked with evidence code D.</p>
+  <p><strong>Named HR contacts, personal emails and phone numbers are not included.</strong> Not because they are unfindable, but because assembling a few hundred individual recruiters' names, inboxes and numbers into one file is a different thing from helping you apply — and any that could not be sourced would have to be invented, which you explicitly ruled out. The reliable method for finding the right person yourself, one company at a time, is at the end.</p>
+</div>
+
+<h2>How to read the evidence column</h2>
+<div class="ladder">
+<dl>
+<dt><span class="code">A</span>Confirmed campus in Jaipur</dt>
+<dd>Named in Mahindra World City / Rajasthan SEZ records or the company's own press material as operating a Jaipur facility. The strongest evidence here.</dd>
+<dt><span class="code">B</span>Jaipur-headquartered, multiple sources</dt>
+<dd>Appears as a Jaipur company across independent listings, often with a street address in Sitapura, Malviya Nagar, Mansarovar or Vaishali Nagar.</dd>
+<dt><span class="code">C</span>Vetted agency directory</dt>
+<dd>Carries a "verified company, Jaipur, India" listing on TechBehemoths or a top-reviewed placement on The Manifest, both of which check location.</dd>
+<dt><span class="code">D</span>Jaipur job posting seen</dt>
+<dd>A role with a Jaipur (or named Jaipur neighbourhood) location appeared on Indeed or Glassdoor during this research. These are the rows with live hiring signal.</dd>
+<dt><span class="code">E</span>Jaipur-HQ company in funding data</dt>
+<dd>Listed with a Jaipur headquarters in Inc42's funding database, with employee counts as shown in the notes.</dd>
+</dl>
+</div>
+<p style="color:var(--ink-soft);font-size:14px">Where a row shows more than one code, more than one independent source put the company in Jaipur. Rows resting on a single C or a single B are the ones to sanity-check first.</p>
+
+<h2>The list</h2>
+<div class="controls">
+  <input type="search" id="q" placeholder="Filter by company name" aria-label="Filter by company name">
+  <button data-f="all" aria-pressed="true">All</button>
+  <button data-f="fit-hi" aria-pressed="false">Fresher-friendly only</button>
+  <span class="count" id="count"></span>
+</div>
+
+<h3>Tier 1 — Strong software, product and engineering-led companies</h3>
+<p style="color:var(--ink-soft);font-size:14px;margin-top:2px">Where an "SDE" title means actual software engineering, and where the brand carries weight on a CV.</p>
+<div class="tablewrap"><table>
+<thead><tr><th></th><th>Company</th><th>Jaipur location</th><th>Roles to look for</th><th>Fresher fit</th><th>Evidence</th><th>Check now</th></tr></thead>
+<tbody>
+<tr data-fit="fit-hi" data-name="girnar software (cardekho / girnarsoft)">
+<td class="num">1</td>
+<td class="co"><span class="co-name">Girnar Software (CarDekho / GirnarSoft)</span><span class="co-note">Jaipur HQ. The single strongest product-engineering employer in the city.</span></td>
+<td>Malviya Nagar + EPIP Sitapura</td>
+<td class="roles">SDE-1, Backend (Java/Node), Frontend (React), Android, Data</td>
+<td><span class="fit fit-hi">High — campus + fresher hiring</span></td>
+<td class="ev">A,B,E</td>
+<td class="links"><a href="https://www.google.com/search?q=Girnar+Software+%28CarDekho+%2F+GirnarSoft%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Girnar+Software+%28CarDekho+%2F+GirnarSoft%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Girnar+Software+%28CarDekho+%2F+GirnarSoft%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="celebal technologies">
+<td class="num">2</td>
+<td class="co"><span class="co-name">Celebal Technologies</span><span class="co-note">Jaipur HQ, ~2,800 staff. Microsoft/Databricks partner; hires freshers in cohorts.</span></td>
+<td>Sitapura / Jaipur HQ</td>
+<td class="roles">Software Engineer, Data Engineer, Azure/Cloud, ML</td>
+<td><span class="fit fit-hi">High — large fresher intake</span></td>
+<td class="ev">B,E</td>
+<td class="links"><a href="https://www.google.com/search?q=Celebal+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Celebal+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Celebal+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="metacube software">
+<td class="num">3</td>
+<td class="co"><span class="co-name">Metacube Software</span><span class="co-note">Long-standing Jaipur product-engineering firm with structured trainee programme.</span></td>
+<td>Mahindra World City SEZ</td>
+<td class="roles">Software Engineer, Salesforce Dev, QA, Java, Cloud</td>
+<td><span class="fit fit-hi">High — trainee boot camps</span></td>
+<td class="ev">A,B</td>
+<td class="links"><a href="https://www.google.com/search?q=Metacube+Software+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Metacube+Software&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Metacube+Software" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="auriga it consulting">
+<td class="num">4</td>
+<td class="co"><span class="co-name">Auriga IT Consulting</span><span class="co-note">Careers page at aurigait.com/careers. Fresher SE roles seen on AMCAT.</span></td>
+<td>Jaipur</td>
+<td class="roles">Software Engineer, Full-Stack, Frontend, Backend, Data</td>
+<td><span class="fit fit-hi">High — has hired MCA/B.Tech freshers</span></td>
+<td class="ev">B,D</td>
+<td class="links"><a href="https://www.google.com/search?q=Auriga+IT+Consulting+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Auriga+IT+Consulting&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Auriga+IT+Consulting" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="nagarro">
+<td class="num">5</td>
+<td class="co"><span class="co-name">Nagarro</span><span class="co-note">Confirmed MWC Jaipur IT/ITeS SEZ tenant in Mahindra press records.</span></td>
+<td>Mahindra World City SEZ</td>
+<td class="roles">Associate Engineer, Full-Stack, Cloud, DevOps</td>
+<td><span class="fit fit-hi">High — trainee programme</span></td>
+<td class="ev">A</td>
+<td class="links"><a href="https://www.google.com/search?q=Nagarro+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Nagarro&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Nagarro" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="deutsche bank (technology centre)">
+<td class="num">6</td>
+<td class="co"><span class="co-name">Deutsche Bank (technology centre)</span><span class="co-note">One of MWC Jaipur&#x27;s first two IT/ITeS clients.</span></td>
+<td>Mahindra World City SEZ</td>
+<td class="roles">Software Engineer, Java, Cloud, SRE</td>
+<td><span class="fit fit-mid">Medium — graduate programme, competitive</span></td>
+<td class="ev">A</td>
+<td class="links"><a href="https://www.google.com/search?q=Deutsche+Bank+%28technology+centre%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Deutsche+Bank+%28technology+centre%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Deutsche+Bank+%28technology+centre%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="infosys">
+<td class="num">7</td>
+<td class="co"><span class="co-name">Infosys</span><span class="co-note">Anchor tenant at MWC Jaipur. Apply through Infosys off-campus tests.</span></td>
+<td>Mahindra World City SEZ</td>
+<td class="roles">Systems Engineer Trainee, Specialist Programmer</td>
+<td><span class="fit fit-hi">High — NQT / InfyTQ route</span></td>
+<td class="ev">A</td>
+<td class="links"><a href="https://www.google.com/search?q=Infosys+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Infosys&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Infosys" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="wipro">
+<td class="num">8</td>
+<td class="co"><span class="co-name">Wipro</span><span class="co-note">Anchor tenant at MWC Jaipur alongside Infosys.</span></td>
+<td>Mahindra World City SEZ / Sitapura</td>
+<td class="roles">Project Engineer, Elite NLTH hires, Cloud</td>
+<td><span class="fit fit-hi">High — Elite NTH route</span></td>
+<td class="ev">A</td>
+<td class="links"><a href="https://www.google.com/search?q=Wipro+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Wipro&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Wipro" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="tata consultancy services">
+<td class="num">9</td>
+<td class="co"><span class="co-name">Tata Consultancy Services</span><span class="co-note">Jaipur presence widely reported; confirm the exact delivery-centre address before applying.</span></td>
+<td>Jaipur</td>
+<td class="roles">Systems Engineer, IT Analyst trainee</td>
+<td><span class="fit fit-hi">High — TCS NQT route</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Tata+Consultancy+Services+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Tata+Consultancy+Services&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Tata+Consultancy+Services" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="tech mahindra">
+<td class="num">10</td>
+<td class="co"><span class="co-name">Tech Mahindra</span><span class="co-note">Listed among MWC Jaipur IT/ITeS signings.</span></td>
+<td>Mahindra World City SEZ</td>
+<td class="roles">Software Engineer, Support Engineer</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">A</td>
+<td class="links"><a href="https://www.google.com/search?q=Tech+Mahindra+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Tech+Mahindra&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Tech+Mahindra" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="nucleus software">
+<td class="num">11</td>
+<td class="co"><span class="co-name">Nucleus Software</span><span class="co-note">Banking-software product company; listed as an MWC Jaipur IT SEZ client.</span></td>
+<td>Mahindra World City SEZ</td>
+<td class="roles">Software Engineer, Java, Product Engineering</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">A</td>
+<td class="links"><a href="https://www.google.com/search?q=Nucleus+Software+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Nucleus+Software&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Nucleus+Software" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="genpact">
+<td class="num">12</td>
+<td class="co"><span class="co-name">Genpact</span><span class="co-note">Confirmed MWC Jaipur client; also operates from Sitapura.</span></td>
+<td>Sitapura / Mahindra World City</td>
+<td class="roles">Software Engineer, Automation, Data, Cloud Support</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">A</td>
+<td class="links"><a href="https://www.google.com/search?q=Genpact+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Genpact&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Genpact" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="exl service">
+<td class="num">13</td>
+<td class="co"><span class="co-name">EXL Service</span><span class="co-note">Named as an MWC Jaipur IT/ITeS SEZ client.</span></td>
+<td>Mahindra World City SEZ</td>
+<td class="roles">Analytics Engineer, Automation Developer</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">A</td>
+<td class="links"><a href="https://www.google.com/search?q=EXL+Service+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=EXL+Service&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=EXL+Service" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="metlife global operations">
+<td class="num">14</td>
+<td class="co"><span class="co-name">MetLife Global Operations</span><span class="co-note">Long-standing MWC Jaipur tenant.</span></td>
+<td>Mahindra World City SEZ</td>
+<td class="roles">Software Engineer, Data, QA</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">A</td>
+<td class="links"><a href="https://www.google.com/search?q=MetLife+Global+Operations+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=MetLife+Global+Operations&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=MetLife+Global+Operations" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="mtx group">
+<td class="num">15</td>
+<td class="co"><span class="co-name">MTX Group</span><span class="co-note">US-headquartered with a substantial Jaipur engineering centre.</span></td>
+<td>Jaipur</td>
+<td class="roles">Software Engineer, Salesforce, Data/AI</td>
+<td><span class="fit fit-hi">High — hires freshers</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=MTX+Group+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=MTX+Group&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=MTX+Group" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="synoriq">
+<td class="num">16</td>
+<td class="co"><span class="co-name">Synoriq</span><span class="co-note">Jaipur product company building lending/NBFC software. Genuine SDE work.</span></td>
+<td>Jaipur</td>
+<td class="roles">SDE-1, Backend (Java/Spring), Frontend (React), DevOps</td>
+<td><span class="fit fit-hi">High — hires freshers directly</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Synoriq+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Synoriq&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Synoriq" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="appcino technologies">
+<td class="num">17</td>
+<td class="co"><span class="co-name">Appcino Technologies</span><span class="co-note">Jaipur-based Appian partner; known for training freshers on the platform.</span></td>
+<td>Jaipur</td>
+<td class="roles">Software Engineer, Appian/low-code, Full-Stack</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Appcino+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Appcino+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Appcino+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="cyntexa labs">
+<td class="num">18</td>
+<td class="co"><span class="co-name">Cyntexa Labs</span><span class="co-note">250–999 staff per TechBehemoths. Very fresher-friendly.</span></td>
+<td>Jaipur</td>
+<td class="roles">Salesforce Developer, Full-Stack, Cloud, DevOps</td>
+<td><span class="fit fit-hi">High — active fresher hiring</span></td>
+<td class="ev">B,C</td>
+<td class="links"><a href="https://www.google.com/search?q=Cyntexa+Labs+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Cyntexa+Labs&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Cyntexa+Labs" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="pratham software (psi)">
+<td class="num">19</td>
+<td class="co"><span class="co-name">Pratham Software (PSI)</span><span class="co-note">Established Jaipur offshore development company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Software Engineer, .NET/Java, Data Engineering</td>
+<td><span class="fit fit-hi">High — trainee intake</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Pratham+Software+%28PSI%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Pratham+Software+%28PSI%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Pratham+Software+%28PSI%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="a3logics">
+<td class="num">20</td>
+<td class="co"><span class="co-name">A3logics</span><span class="co-note">~350+ staff; Jaipur-based with US presence.</span></td>
+<td>Jaipur</td>
+<td class="roles">Software Engineer, Full-Stack, EDI, Cloud</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=A3logics+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=A3logics&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=A3logics" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="dotsquares technologies india">
+<td class="num">21</td>
+<td class="co"><span class="co-name">Dotsquares Technologies India</span><span class="co-note">UK-headquartered, 1,000+ people in Jaipur. One of the largest local recruiters.</span></td>
+<td>Jaipur (large delivery centre)</td>
+<td class="roles">PHP/Laravel, .NET, React, Node, Mobile</td>
+<td><span class="fit fit-hi">High — recruits freshers in volume</span></td>
+<td class="ev">B,C</td>
+<td class="links"><a href="https://www.google.com/search?q=Dotsquares+Technologies+India+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Dotsquares+Technologies+India&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Dotsquares+Technologies+India" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="matellio india">
+<td class="num">22</td>
+<td class="co"><span class="co-name">Matellio India</span><span class="co-note">Jaipur development centre serving US clients.</span></td>
+<td>Jaipur</td>
+<td class="roles">Full-Stack, Python, AI/ML, Mobile</td>
+<td><span class="fit fit-mid">Medium–High</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Matellio+India+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Matellio+India&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Matellio+India" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="ubuy india">
+<td class="num">23</td>
+<td class="co"><span class="co-name">Ubuy India</span><span class="co-note">Cross-border e-commerce platform with Jaipur engineering team.</span></td>
+<td>Jaipur</td>
+<td class="roles">Backend, Frontend, Platform Engineering</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Ubuy+India+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Ubuy+India&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Ubuy+India" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="au small finance bank (digital/tech)">
+<td class="num">24</td>
+<td class="co"><span class="co-name">AU Small Finance Bank (digital/tech)</span><span class="co-note">Jaipur-headquartered bank with an in-house digital engineering team.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Software Engineer, Backend, Data, Cloud</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B,E</td>
+<td class="links"><a href="https://www.google.com/search?q=AU+Small+Finance+Bank+%28digital%2Ftech%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=AU+Small+Finance+Bank+%28digital%2Ftech%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=AU+Small+Finance+Bank+%28digital%2Ftech%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="finova capital (technology team)">
+<td class="num">25</td>
+<td class="co"><span class="co-name">Finova Capital (technology team)</span><span class="co-note">Jaipur-HQ fintech, ~2,200 staff; in-house tech function.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Software Engineer, Backend, Data</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Finova+Capital+%28technology+team%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Finova+Capital+%28technology+team%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Finova+Capital+%28technology+team%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+</tbody></table></div>
+
+<h3>Tier 2 — Established IT services and software companies</h3>
+<p style="color:var(--ink-soft);font-size:14px;margin-top:2px">Client-services work rather than product ownership, but these hire the highest volume of freshers in Jaipur and respond fastest.</p>
+<div class="tablewrap"><table>
+<thead><tr><th></th><th>Company</th><th>Jaipur location</th><th>Roles to look for</th><th>Fresher fit</th><th>Evidence</th><th>Check now</th></tr></thead>
+<tbody>
+<tr data-fit="fit-hi" data-name="konstant infosolutions">
+<td class="num">26</td>
+<td class="co"><span class="co-name">Konstant Infosolutions</span><span class="co-note">Founded 2003; 50–249 staff; named as an active fresher recruiter.</span></td>
+<td>Jaipur</td>
+<td class="roles">PHP, Node, React, Android/iOS</td>
+<td><span class="fit fit-hi">High — recruits freshers</span></td>
+<td class="ev">B,C</td>
+<td class="links"><a href="https://www.google.com/search?q=Konstant+Infosolutions+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Konstant+Infosolutions&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Konstant+Infosolutions" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="dev technosys">
+<td class="num">27</td>
+<td class="co"><span class="co-name">Dev Technosys</span><span class="co-note">Verified Jaipur company on TechBehemoths.</span></td>
+<td>Jaipur</td>
+<td class="roles">Full-Stack, Mobile, Python, Node</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=Dev+Technosys+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Dev+Technosys&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Dev+Technosys" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="octal it solution">
+<td class="num">28</td>
+<td class="co"><span class="co-name">Octal IT Solution</span><span class="co-note">250+ employees; long-standing Jaipur development firm.</span></td>
+<td>Jaipur</td>
+<td class="roles">Mobile, Full-Stack, Blockchain, AI</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B,C</td>
+<td class="links"><a href="https://www.google.com/search?q=Octal+IT+Solution+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Octal+IT+Solution&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Octal+IT+Solution" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="br softech">
+<td class="num">29</td>
+<td class="co"><span class="co-name">BR Softech</span><span class="co-note">Verified Jaipur company; game-development roles are unusual for the city.</span></td>
+<td>Jaipur</td>
+<td class="roles">Game Dev (Unity), Web, Mobile, Blockchain</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=BR+Softech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=BR+Softech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=BR+Softech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="the ninehertz">
+<td class="num">30</td>
+<td class="co"><span class="co-name">The NineHertz</span><span class="co-note">Featured verified Jaipur company on TechBehemoths.</span></td>
+<td>Jaipur</td>
+<td class="roles">Full-Stack, Mobile, AI engineering</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=The+NineHertz+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=The+NineHertz&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=The+NineHertz" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="techgropse">
+<td class="num">31</td>
+<td class="co"><span class="co-name">TechGropse</span><span class="co-note">250–999 staff per TechBehemoths.</span></td>
+<td>Jaipur</td>
+<td class="roles">Mobile, Full-Stack, Custom Software</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=TechGropse+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=TechGropse&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=TechGropse" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="dianapps technologies">
+<td class="num">32</td>
+<td class="co"><span class="co-name">DianApps Technologies</span><span class="co-note">Jaipur-headquartered; repeat TechBehemoths award winner.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">React/React Native, Node, AI, UI/UX</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B,C</td>
+<td class="links"><a href="https://www.google.com/search?q=DianApps+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=DianApps+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=DianApps+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="endive software">
+<td class="num">33</td>
+<td class="co"><span class="co-name">Endive Software</span><span class="co-note">500+ web projects; established Jaipur firm.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Mobile, Full-Stack</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Endive+Software+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Endive+Software&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Endive+Software" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="next big technology">
+<td class="num">34</td>
+<td class="co"><span class="co-name">Next Big Technology</span><span class="co-note">Jaipur HQ, 100+ staff across four offices.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Mobile, E-commerce</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Next+Big+Technology+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Next+Big+Technology&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Next+Big+Technology" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="aryavrat infotech">
+<td class="num">35</td>
+<td class="co"><span class="co-name">Aryavrat Infotech</span><span class="co-note">Jaipur office confirmed with street address.</span></td>
+<td>Metropolis Tower, Ajmer Road</td>
+<td class="roles">Web, Mobile, Cloud, IoT</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B,C</td>
+<td class="links"><a href="https://www.google.com/search?q=Aryavrat+Infotech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Aryavrat+Infotech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Aryavrat+Infotech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="inventco software">
+<td class="num">36</td>
+<td class="co"><span class="co-name">Inventco Software</span><span class="co-note">50–249 staff; verified Jaipur company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Mobile, Cloud, Data</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=Inventco+Software+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Inventco+Software&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Inventco+Software" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="ebizneeds business solution">
+<td class="num">37</td>
+<td class="co"><span class="co-name">eBizneeds Business Solution</span><span class="co-note">50–249 staff; verified Jaipur company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Mobile, E-commerce</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=eBizneeds+Business+Solution+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=eBizneeds+Business+Solution&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=eBizneeds+Business+Solution" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="startbit it solutions">
+<td class="num">38</td>
+<td class="co"><span class="co-name">Startbit IT Solutions</span><span class="co-note">ISO-certified, founded 2008 in Jaipur.</span></td>
+<td>Jaipur</td>
+<td class="roles">E-commerce, SAP, Salesforce, Mobile, Web</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B,C</td>
+<td class="links"><a href="https://www.google.com/search?q=Startbit+IT+Solutions+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Startbit+IT+Solutions&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Startbit+IT+Solutions" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="img global infotech">
+<td class="num">39</td>
+<td class="co"><span class="co-name">IMG Global Infotech</span><span class="co-note">50–249 staff; verified Jaipur company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Mobile, E-commerce, Web</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=IMG+Global+Infotech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=IMG+Global+Infotech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=IMG+Global+Infotech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="jploft solutions">
+<td class="num">40</td>
+<td class="co"><span class="co-name">JPLoft Solutions</span><span class="co-note">50–249 staff; verified Jaipur company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Mobile, Full-Stack, AI</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=JPLoft+Solutions+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=JPLoft+Solutions&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=JPLoft+Solutions" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="rg infotech">
+<td class="num">41</td>
+<td class="co"><span class="co-name">RG Infotech</span><span class="co-note">10–49 staff; verified Jaipur company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Mobile, UI/UX</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=RG+Infotech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=RG+Infotech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=RG+Infotech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="synarion it solutions">
+<td class="num">42</td>
+<td class="co"><span class="co-name">Synarion IT Solutions</span><span class="co-note">Jaipur address confirmed (C-6/82, Chitrakoot Marg).</span></td>
+<td>Vaishali Nagar</td>
+<td class="roles">Web, Mobile, Full-Stack</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Synarion+IT+Solutions+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Synarion+IT+Solutions&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Synarion+IT+Solutions" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="vidhema technologies">
+<td class="num">43</td>
+<td class="co"><span class="co-name">Vidhema Technologies</span><span class="co-note">Listed as offering internships and campus placement.</span></td>
+<td>Shanthi Nagar, Mansarovar</td>
+<td class="roles">Web, Mobile, ERP/CRM integration</td>
+<td><span class="fit fit-hi">High — states it hires freshers</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Vidhema+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Vidhema+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Vidhema+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="decipher zone technologies">
+<td class="num">44</td>
+<td class="co"><span class="co-name">Decipher Zone Technologies</span><span class="co-note">Highly-reviewed Jaipur IT services firm on The Manifest.</span></td>
+<td>Jaipur</td>
+<td class="roles">Java, Full-Stack, Web</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=Decipher+Zone+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Decipher+Zone+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Decipher+Zone+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="w3care technologies">
+<td class="num">45</td>
+<td class="co"><span class="co-name">W3care Technologies</span><span class="co-note">Listed among top-reviewed Jaipur IT services companies.</span></td>
+<td>Jaipur</td>
+<td class="roles">PHP, Laravel, Full-Stack</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=W3care+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=W3care+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=W3care+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="fexle services">
+<td class="num">46</td>
+<td class="co"><span class="co-name">Fexle Services</span><span class="co-note">Listed among top-reviewed Jaipur IT services companies.</span></td>
+<td>Jaipur</td>
+<td class="roles">Salesforce Developer, Full-Stack</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=Fexle+Services+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Fexle+Services&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Fexle+Services" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="strivemindz">
+<td class="num">47</td>
+<td class="co"><span class="co-name">Strivemindz</span><span class="co-note">Listed among top-reviewed Jaipur IT services companies.</span></td>
+<td>Jaipur</td>
+<td class="roles">Mobile, Web, Full-Stack</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=Strivemindz+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Strivemindz&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Strivemindz" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="closeloop technologies">
+<td class="num">48</td>
+<td class="co"><span class="co-name">Closeloop Technologies</span><span class="co-note">Listed among top-reviewed Jaipur IT services companies.</span></td>
+<td>Jaipur</td>
+<td class="roles">Full-Stack, Cloud, Salesforce</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=Closeloop+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Closeloop+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Closeloop+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="softvolt">
+<td class="num">49</td>
+<td class="co"><span class="co-name">Softvolt</span><span class="co-note">Listed among top-reviewed Jaipur IT services companies.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Mobile, Full-Stack</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=Softvolt+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Softvolt&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Softvolt" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="ezulix software">
+<td class="num">50</td>
+<td class="co"><span class="co-name">Ezulix Software</span><span class="co-note">Jaipur address confirmed; 8+ years operating locally.</span></td>
+<td>Malviya Nagar / Hari Marg</td>
+<td class="roles">PHP, CRM/ERP, Fintech APIs, Mobile</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Ezulix+Software+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Ezulix+Software&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Ezulix+Software" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="sunarc technologies">
+<td class="num">51</td>
+<td class="co"><span class="co-name">SunArc Technologies</span><span class="co-note">Listed on a Jaipur-specific IT employer directory.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Mobile, Full-Stack</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=SunArc+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=SunArc+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=SunArc+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="durapid technologies">
+<td class="num">52</td>
+<td class="co"><span class="co-name">Durapid Technologies</span><span class="co-note">Listed on a Jaipur-specific IT employer directory.</span></td>
+<td>Jaipur</td>
+<td class="roles">Full-Stack, Cloud, Data</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Durapid+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Durapid+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Durapid+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="orion infosolution">
+<td class="num">53</td>
+<td class="co"><span class="co-name">Orion InfoSolution</span><span class="co-note">Listed on a Jaipur-specific IT employer directory.</span></td>
+<td>Jaipur</td>
+<td class="roles">Mobile, Web, Full-Stack</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Orion+InfoSolution+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Orion+InfoSolution&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Orion+InfoSolution" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="infoshore software">
+<td class="num">54</td>
+<td class="co"><span class="co-name">InfoShore Software</span><span class="co-note">Listed on a Jaipur-specific IT employer directory.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Mobile, Software Development</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=InfoShore+Software+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=InfoShore+Software&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=InfoShore+Software" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="ethereal softech">
+<td class="num">55</td>
+<td class="co"><span class="co-name">Ethereal Softech</span><span class="co-note">Explicitly listed as hiring freshers and offering internships.</span></td>
+<td>Jaipur</td>
+<td class="roles">Node, Python, AI/ML, React, Flutter, Salesforce</td>
+<td><span class="fit fit-hi">High — states it hires freshers</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Ethereal+Softech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Ethereal+Softech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Ethereal+Softech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="appic software">
+<td class="num">56</td>
+<td class="co"><span class="co-name">Appic Software</span><span class="co-note">Listed as hiring freshers, offering internships and doing campus placement.</span></td>
+<td>Jaipur</td>
+<td class="roles">Full-Stack, Fintech/Edtech products</td>
+<td><span class="fit fit-hi">High — states it hires freshers</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Appic+Software+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Appic+Software&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Appic+Software" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="helpful insight">
+<td class="num">57</td>
+<td class="co"><span class="co-name">Helpful Insight</span><span class="co-note">Listed on a Jaipur-specific IT employer directory.</span></td>
+<td>Jaipur</td>
+<td class="roles">Salesforce, Web, Full-Stack</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Helpful+Insight+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Helpful+Insight&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Helpful+Insight" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="ways &amp; means technology">
+<td class="num">58</td>
+<td class="co"><span class="co-name">Ways &amp; Means Technology</span><span class="co-note">Listed on a Jaipur-specific IT employer directory.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Mobile, Software Development</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Ways+%26+Means+Technology+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Ways+%26+Means+Technology&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Ways+%26+Means+Technology" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="prerna trimurty infotech">
+<td class="num">59</td>
+<td class="co"><span class="co-name">Prerna Trimurty Infotech</span><span class="co-note">Listed on a Jaipur-specific IT employer directory.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Software Development</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Prerna+Trimurty+Infotech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Prerna+Trimurty+Infotech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Prerna+Trimurty+Infotech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="klobtech">
+<td class="num">60</td>
+<td class="co"><span class="co-name">KlobTech</span><span class="co-note">Listed on a Jaipur-specific IT employer directory.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Mobile, Full-Stack</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=KlobTech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=KlobTech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=KlobTech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="pixospace">
+<td class="num">61</td>
+<td class="co"><span class="co-name">PixoSpace</span><span class="co-note">Listed on a Jaipur-specific IT employer directory.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, UI/UX, Full-Stack</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=PixoSpace+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=PixoSpace&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=PixoSpace" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="isys softech">
+<td class="num">62</td>
+<td class="co"><span class="co-name">Isys Softech</span><span class="co-note">MWC Jaipur facility inaugurated by the state Home Minister.</span></td>
+<td>Mahindra World City</td>
+<td class="roles">Software Development, Web</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">A</td>
+<td class="links"><a href="https://www.google.com/search?q=Isys+Softech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Isys+Softech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Isys+Softech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="shubhashish it services">
+<td class="num">63</td>
+<td class="co"><span class="co-name">Shubhashish IT Services</span><span class="co-note">Named among leading Jaipur software companies.</span></td>
+<td>Jaipur</td>
+<td class="roles">Software Development, IT Services</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Shubhashish+IT+Services+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Shubhashish+IT+Services&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Shubhashish+IT+Services" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="compucom technologies">
+<td class="num">64</td>
+<td class="co"><span class="co-name">Compucom Technologies</span><span class="co-note">Long-established Jaipur IT company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Software Development, IT Services, e-Governance</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Compucom+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Compucom+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Compucom+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="vgl softech">
+<td class="num">65</td>
+<td class="co"><span class="co-name">VGL Softech</span><span class="co-note">Software arm associated with the Jaipur-based VGL group.</span></td>
+<td>Jaipur</td>
+<td class="roles">Software Development, E-commerce</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=VGL+Softech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=VGL+Softech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=VGL+Softech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="metablock technologies">
+<td class="num">66</td>
+<td class="co"><span class="co-name">MetaBlock Technologies</span><span class="co-note">Explicitly described as a Jaipur-based Indian IT company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Blockchain, Web, Mobile, Game Dev, AI</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">B,C</td>
+<td class="links"><a href="https://www.google.com/search?q=MetaBlock+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=MetaBlock+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=MetaBlock+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="zyneto global technologies">
+<td class="num">67</td>
+<td class="co"><span class="co-name">Zyneto Global Technologies</span><span class="co-note">50–249 staff; verified Jaipur company.</span></td>
+<td>Jaipur</td>
+<td class="roles">AI, Cloud, Web Development</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=Zyneto+Global+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Zyneto+Global+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Zyneto+Global+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="itxitpro">
+<td class="num">68</td>
+<td class="co"><span class="co-name">ITXITPro</span><span class="co-note">50–249 staff; verified Jaipur company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web Development, SEO, Full-Stack</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=ITXITPro+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=ITXITPro&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=ITXITPro" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="ambient infotech">
+<td class="num">69</td>
+<td class="co"><span class="co-name">Ambient Infotech</span><span class="co-note">10–49 staff; verified Jaipur company.</span></td>
+<td>Jaipur</td>
+<td class="roles">E-commerce, Web, Mobile</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=Ambient+Infotech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Ambient+Infotech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Ambient+Infotech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="justaddwater">
+<td class="num">70</td>
+<td class="co"><span class="co-name">JUSTADDWATER</span><span class="co-note">10–49 staff; verified Jaipur company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web apps, AI, Custom Software</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=JUSTADDWATER+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=JUSTADDWATER&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=JUSTADDWATER" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="startup labs infotech">
+<td class="num">71</td>
+<td class="co"><span class="co-name">Startup Labs Infotech</span><span class="co-note">10–49 staff; verified Jaipur company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Custom Software, AI, Mobile</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">C</td>
+<td class="links"><a href="https://www.google.com/search?q=Startup+Labs+Infotech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Startup+Labs+Infotech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Startup+Labs+Infotech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="mobzway technologies">
+<td class="num">72</td>
+<td class="co"><span class="co-name">Mobzway Technologies</span><span class="co-note">Fresher Software Developer and QA Intern roles seen on Indeed Jaipur.</span></td>
+<td>Jaipur</td>
+<td class="roles">Software Developer (fresher), Game/Real-money platforms, QA</td>
+<td><span class="fit fit-hi">High — posts fresher roles</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Mobzway+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Mobzway+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Mobzway+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="iglobe solutions">
+<td class="num">73</td>
+<td class="co"><span class="co-name">iGlobe Solutions</span><span class="co-note">Named as a growing Jaipur IT company.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Digital, Full-Stack</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=iGlobe+Solutions+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=iGlobe+Solutions&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=iGlobe+Solutions" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="anti ai private limited">
+<td class="num">74</td>
+<td class="co"><span class="co-name">Anti AI Private Limited</span><span class="co-note">Listed on a Jaipur-specific IT employer directory.</span></td>
+<td>Jaipur</td>
+<td class="roles">AI/ML, Software Development</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Anti+AI+Private+Limited+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Anti+AI+Private+Limited&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Anti+AI+Private+Limited" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+</tbody></table></div>
+
+<h3>Tier 3 — Startups and smaller technology companies</h3>
+<p style="color:var(--ink-soft);font-size:14px;margin-top:2px">Smaller teams, less structured hiring, far better odds on a well-written cold email. Several posted intern roles during this research.</p>
+<div class="tablewrap"><table>
+<thead><tr><th></th><th>Company</th><th>Jaipur location</th><th>Roles to look for</th><th>Fresher fit</th><th>Evidence</th><th>Check now</th></tr></thead>
+<tbody>
+<tr data-fit="fit-hi" data-name="orufy technologies">
+<td class="num">75</td>
+<td class="co"><span class="co-name">Orufy Technologies</span><span class="co-note">Internship listings with a Vaishali Nagar, Jaipur location on Indeed.</span></td>
+<td>Vaishali Nagar</td>
+<td class="roles">Backend Intern, Software Tester Intern, Full-Stack</td>
+<td><span class="fit fit-hi">High — posts internships</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Orufy+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Orufy+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Orufy+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="getepay">
+<td class="num">76</td>
+<td class="co"><span class="co-name">GetePay</span><span class="co-note">Jaipur fintech, ~58 staff, $8M raised. Small team, real product work.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Backend, Android, Payments Integration</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=GetePay+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=GetePay&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=GetePay" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="wevois labs">
+<td class="num">77</td>
+<td class="co"><span class="co-name">WeVOIS Labs</span><span class="co-note">Jaipur cleantech, ~259 staff, Series A. Builds its own waste-tech platform.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Backend, Mobile, IoT/Data</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=WeVOIS+Labs+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=WeVOIS+Labs&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=WeVOIS+Labs" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="wooden street (tech team)">
+<td class="num">78</td>
+<td class="co"><span class="co-name">Wooden Street (tech team)</span><span class="co-note">Jaipur-HQ D2C, ~989 staff, Series C. In-house e-commerce engineering.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Backend, E-commerce platform</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Wooden+Street+%28tech+team%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Wooden+Street+%28tech+team%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Wooden+Street+%28tech+team%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="minimalist (tech team)">
+<td class="num">79</td>
+<td class="co"><span class="co-name">Minimalist (tech team)</span><span class="co-note">Jaipur-HQ skincare brand, ~468 staff. Small in-house tech function.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Backend, Data</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Minimalist+%28tech+team%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Minimalist+%28tech+team%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Minimalist+%28tech+team%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="dawaa dost">
+<td class="num">80</td>
+<td class="co"><span class="co-name">Dawaa Dost</span><span class="co-note">Jaipur healthtech, ~218 staff, $4M raised.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Backend, Mobile</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Dawaa+Dost+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Dawaa+Dost&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Dawaa+Dost" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="shaadidukaan.com">
+<td class="num">81</td>
+<td class="co"><span class="co-name">Shaadidukaan.com</span><span class="co-note">Jaipur marketplace, ~105 staff. Small team; approachable.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Backend, Frontend</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Shaadidukaan.com+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Shaadidukaan.com&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Shaadidukaan.com" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="wholesalebox">
+<td class="num">82</td>
+<td class="co"><span class="co-name">WholeSaleBox</span><span class="co-note">Jaipur B2B e-commerce, ~58 staff.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Backend, Full-Stack, Mobile</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=WholeSaleBox+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=WholeSaleBox&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=WholeSaleBox" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="aramya">
+<td class="num">83</td>
+<td class="co"><span class="co-name">Aramya</span><span class="co-note">Jaipur D2C founded 2022, ~149 staff, $7M seed. Young and growing.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Backend, Data</td>
+<td><span class="fit fit-hi">High</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Aramya+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Aramya&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Aramya" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="growpital">
+<td class="num">84</td>
+<td class="co"><span class="co-name">Growpital</span><span class="co-note">Jaipur agri-investment platform.</span></td>
+<td>Jaipur</td>
+<td class="roles">Full-Stack, Backend</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Growpital+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Growpital&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Growpital" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="square insurance brokers">
+<td class="num">85</td>
+<td class="co"><span class="co-name">Square Insurance Brokers</span><span class="co-note">Jaipur insurtech, ~265 staff.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Backend, Insurtech</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Square+Insurance+Brokers+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Square+Insurance+Brokers&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Square+Insurance+Brokers" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="futurecure health">
+<td class="num">86</td>
+<td class="co"><span class="co-name">FutureCure Health</span><span class="co-note">Jaipur healthtech, Series A.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Health platform engineering</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=FutureCure+Health+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=FutureCure+Health&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=FutureCure+Health" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="balwaan">
+<td class="num">87</td>
+<td class="co"><span class="co-name">Balwaan</span><span class="co-note">Jaipur agritech, ~97 staff, Series A.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Software/IoT, Backend</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Balwaan+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Balwaan&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Balwaan" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="ascend capital">
+<td class="num">88</td>
+<td class="co"><span class="co-name">Ascend Capital</span><span class="co-note">Jaipur fintech, ~158 staff, Series A.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Backend, Fintech platform</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Ascend+Capital+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Ascend+Capital&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Ascend+Capital" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="quick smart wash">
+<td class="num">89</td>
+<td class="co"><span class="co-name">Quick Smart Wash</span><span class="co-note">Jaipur consumer-services startup, Series B.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Backend</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Quick+Smart+Wash+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Quick+Smart+Wash&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Quick+Smart+Wash" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="namdev finvest (tech team)">
+<td class="num">90</td>
+<td class="co"><span class="co-name">Namdev Finvest (tech team)</span><span class="co-note">Jaipur NBFC, ~1,235 staff; in-house tech.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Backend, Data, Lending platform</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Namdev+Finvest+%28tech+team%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Namdev+Finvest+%28tech+team%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Namdev+Finvest+%28tech+team%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="wonder home finance (tech team)">
+<td class="num">91</td>
+<td class="co"><span class="co-name">Wonder Home Finance (tech team)</span><span class="co-note">Jaipur fintech, ~1,247 staff.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Backend, Data, Platform</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Wonder+Home+Finance+%28tech+team%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Wonder+Home+Finance+%28tech+team%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Wonder+Home+Finance+%28tech+team%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="aavas financiers (tech team)">
+<td class="num">92</td>
+<td class="co"><span class="co-name">Aavas Financiers (tech team)</span><span class="co-note">Jaipur-HQ housing finance with an in-house technology function.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Software Engineer, Data, Platform</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Aavas+Financiers+%28tech+team%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Aavas+Financiers+%28tech+team%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Aavas+Financiers+%28tech+team%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="sk finance (tech team)">
+<td class="num">93</td>
+<td class="co"><span class="co-name">SK Finance (tech team)</span><span class="co-note">Named among Jaipur&#x27;s best-funded companies; Jaipur HQ.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Software Engineer, Data, Platform</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=SK+Finance+%28tech+team%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=SK+Finance+%28tech+team%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=SK+Finance+%28tech+team%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="girnar finserv">
+<td class="num">94</td>
+<td class="co"><span class="co-name">Girnar Finserv</span><span class="co-note">Part of the Girnar/CarDekho group in Jaipur.</span></td>
+<td>Jaipur</td>
+<td class="roles">Backend, Fintech</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Girnar+Finserv+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Girnar+Finserv&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Girnar+Finserv" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="hem securities">
+<td class="num">95</td>
+<td class="co"><span class="co-name">Hem Securities</span><span class="co-note">Jaipur brokerage running its own trading app.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Trading platform, Mobile</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Hem+Securities+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Hem+Securities&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Hem+Securities" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="motisons group">
+<td class="num">96</td>
+<td class="co"><span class="co-name">Motisons Group</span><span class="co-note">Jaipur jewellery group with an e-commerce platform.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">E-commerce Developer, Full-Stack</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Motisons+Group+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Motisons+Group&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Motisons+Group" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="voylla">
+<td class="num">97</td>
+<td class="co"><span class="co-name">Voylla</span><span class="co-note">Jaipur-HQ fashion e-commerce, ~303 staff.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">E-commerce, Backend, Full-Stack</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Voylla+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Voylla&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Voylla" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="insolation energy">
+<td class="num">98</td>
+<td class="co"><span class="co-name">Insolation Energy</span><span class="co-note">IT Intern role with web-application development seen on Indeed Jaipur.</span></td>
+<td>Jaipur</td>
+<td class="roles">IT Intern, Web application development</td>
+<td><span class="fit fit-hi">High — posts IT internships</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Insolation+Energy+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Insolation+Energy&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Insolation+Energy" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="novixpert">
+<td class="num">99</td>
+<td class="co"><span class="co-name">Novixpert</span><span class="co-note">Multiple intern listings located in Jaipur on Indeed.</span></td>
+<td>Jaipur</td>
+<td class="roles">ML Engineer Intern, Embedded/Firmware Intern</td>
+<td><span class="fit fit-hi">High — posts internships</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Novixpert+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Novixpert&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Novixpert" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="creatik it solutions">
+<td class="num">100</td>
+<td class="co"><span class="co-name">Creatik IT Solutions</span><span class="co-note">AI/ML intern listing located in Jaipur on Indeed.</span></td>
+<td>Jaipur</td>
+<td class="roles">AI/ML Intern, Software Development</td>
+<td><span class="fit fit-hi">High — posts internships</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Creatik+IT+Solutions+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Creatik+IT+Solutions&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Creatik+IT+Solutions" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="brudite private limited">
+<td class="num">101</td>
+<td class="co"><span class="co-name">Brudite Private Limited</span><span class="co-note">Associate SE and internship-to-PPO listings at Pratap Nagar, Jaipur.</span></td>
+<td>Pratap Nagar</td>
+<td class="roles">Associate Software Engineer, Full-Time Internship with PPO</td>
+<td><span class="fit fit-hi">High — explicit PPO route</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Brudite+Private+Limited+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Brudite+Private+Limited&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Brudite+Private+Limited" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="divanex technologies">
+<td class="num">102</td>
+<td class="co"><span class="co-name">Divanex Technologies</span><span class="co-note">Jaipur-located listing on Indeed.</span></td>
+<td>Jaipur</td>
+<td class="roles">IT Business Analyst, SaaS/ERP/CRM development</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Divanex+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Divanex+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Divanex+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="ecare softech">
+<td class="num">103</td>
+<td class="co"><span class="co-name">eCare Softech</span><span class="co-note">Trainee Developer listing at Khatipura, Jaipur.</span></td>
+<td>Khatipura</td>
+<td class="roles">Trainee Developer, Web applications</td>
+<td><span class="fit fit-hi">High — trainee role</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=eCare+Softech+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=eCare+Softech&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=eCare+Softech" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="logical infosoft">
+<td class="num">104</td>
+<td class="co"><span class="co-name">Logical InfoSoft</span><span class="co-note">Intern listing located in Jaipur on Indeed.</span></td>
+<td>Jaipur</td>
+<td class="roles">UI/UX Intern, Frontend</td>
+<td><span class="fit fit-hi">High — posts internships</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Logical+InfoSoft+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Logical+InfoSoft&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Logical+InfoSoft" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="learn2read">
+<td class="num">105</td>
+<td class="co"><span class="co-name">Learn2Read</span><span class="co-note">Software Developer Intern listing located in Jaipur on Indeed.</span></td>
+<td>Jaipur</td>
+<td class="roles">Software Developer Intern</td>
+<td><span class="fit fit-hi">High — posts internships</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Learn2Read+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Learn2Read&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Learn2Read" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="jrg software and technologies">
+<td class="num">106</td>
+<td class="co"><span class="co-name">JRG Software and Technologies</span><span class="co-note">PHP Trainee/Fresher listing located in Jaipur.</span></td>
+<td>Jaipur</td>
+<td class="roles">PHP Trainee/Fresher, Web &amp; App Development</td>
+<td><span class="fit fit-hi">High — explicit fresher role</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=JRG+Software+and+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=JRG+Software+and+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=JRG+Software+and+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="helios web services">
+<td class="num">107</td>
+<td class="co"><span class="co-name">Helios Web Services</span><span class="co-note">Trainee Software Engineer listing located in Jaipur.</span></td>
+<td>Jaipur</td>
+<td class="roles">Trainee Software Engineer (.NET/Java/Salesforce)</td>
+<td><span class="fit fit-hi">High — explicit trainee role</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Helios+Web+Services+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Helios+Web+Services&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Helios+Web+Services" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-hi" data-name="electroglobal solutions">
+<td class="num">108</td>
+<td class="co"><span class="co-name">Electroglobal Solutions</span><span class="co-note">Robotics intern listing at Jagatpura, Jaipur.</span></td>
+<td>Jagatpura</td>
+<td class="roles">Robotics Intern, Embedded, Hardware-Software integration</td>
+<td><span class="fit fit-hi">High — posts internships</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Electroglobal+Solutions+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Electroglobal+Solutions&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Electroglobal+Solutions" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="force009 security and facilitators">
+<td class="num">109</td>
+<td class="co"><span class="co-name">Force009 Security and Facilitators</span><span class="co-note">Jaipur-located backend developer listings on Glassdoor.</span></td>
+<td>Jaipur</td>
+<td class="roles">Backend Developer (Node/Laravel), API, Web Applications</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">D</td>
+<td class="links"><a href="https://www.google.com/search?q=Force009+Security+and+Facilitators+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Force009+Security+and+Facilitators&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Force009+Security+and+Facilitators" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="owebest technologies">
+<td class="num">110</td>
+<td class="co"><span class="co-name">Owebest Technologies</span><span class="co-note">Described as a leading IT company in Jaipur.</span></td>
+<td>Jaipur</td>
+<td class="roles">Web, Mobile, Full-Stack</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">B</td>
+<td class="links"><a href="https://www.google.com/search?q=Owebest+Technologies+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Owebest+Technologies&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Owebest+Technologies" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="culturealley">
+<td class="num">111</td>
+<td class="co"><span class="co-name">CultureAlley</span><span class="co-note">Jaipur edtech (Hello English), ~47 staff. Small engineering team.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Mobile, Edtech</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=CultureAlley+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=CultureAlley&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=CultureAlley" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-mid" data-name="affordable innovative techno services">
+<td class="num">112</td>
+<td class="co"><span class="co-name">Affordable Innovative Techno Services</span><span class="co-note">Jaipur edtech founded 2023, ~24 staff. Very early — direct founder contact works.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Full-Stack, Edtech platform</td>
+<td><span class="fit fit-mid">Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Affordable+Innovative+Techno+Services+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Affordable+Innovative+Techno+Services&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Affordable+Innovative+Techno+Services" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+<tr data-fit="fit-lo" data-name="rays power infra (tech team)">
+<td class="num">113</td>
+<td class="co"><span class="co-name">Rays Power Infra (tech team)</span><span class="co-note">Jaipur cleantech, ~658 staff. Limited software hiring.</span></td>
+<td>Jaipur HQ</td>
+<td class="roles">Software/Data, Platform Engineering</td>
+<td><span class="fit fit-lo">Low–Medium</span></td>
+<td class="ev">E</td>
+<td class="links"><a href="https://www.google.com/search?q=Rays+Power+Infra+%28tech+team%29+Jaipur+careers" target="_blank" rel="noopener">Careers</a><a href="https://www.linkedin.com/jobs/search/?keywords=Rays+Power+Infra+%28tech+team%29&location=Jaipur%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener">Jobs</a><a href="https://www.linkedin.com/search/results/companies/?keywords=Rays+Power+Infra+%28tech+team%29" target="_blank" rel="noopener">LinkedIn</a></td>
+</tr>
+</tbody></table></div>
+
+<h2>Apply to these thirty first</h2>
+<p>Ranked for a pre-final-year student: quality of the engineering work, willingness to take people with no full-time experience, and the odds of an application actually being read.</p>
+<ol class="picks">
+<li><a href="https://www.google.com/search?q=Girnar+Software+%28CarDekho+%2F+GirnarSoft%29+Jaipur+careers" target="_blank" rel="noopener">Girnar Software (CarDekho / GirnarSoft)</a></li>
+<li><a href="https://www.google.com/search?q=Celebal+Technologies+Jaipur+careers" target="_blank" rel="noopener">Celebal Technologies</a></li>
+<li><a href="https://www.google.com/search?q=Metacube+Software+Jaipur+careers" target="_blank" rel="noopener">Metacube Software</a></li>
+<li><a href="https://www.google.com/search?q=Auriga+IT+Consulting+Jaipur+careers" target="_blank" rel="noopener">Auriga IT Consulting</a></li>
+<li><a href="https://www.google.com/search?q=Synoriq+Jaipur+careers" target="_blank" rel="noopener">Synoriq</a></li>
+<li><a href="https://www.google.com/search?q=Cyntexa+Labs+Jaipur+careers" target="_blank" rel="noopener">Cyntexa Labs</a></li>
+<li><a href="https://www.google.com/search?q=Nagarro+Jaipur+careers" target="_blank" rel="noopener">Nagarro</a></li>
+<li><a href="https://www.google.com/search?q=MTX+Group+Jaipur+careers" target="_blank" rel="noopener">MTX Group</a></li>
+<li><a href="https://www.google.com/search?q=Appcino+Technologies+Jaipur+careers" target="_blank" rel="noopener">Appcino Technologies</a></li>
+<li><a href="https://www.google.com/search?q=Dotsquares+Technologies+India+Jaipur+careers" target="_blank" rel="noopener">Dotsquares Technologies India</a></li>
+<li><a href="https://www.google.com/search?q=Infosys+Jaipur+careers" target="_blank" rel="noopener">Infosys</a></li>
+<li><a href="https://www.google.com/search?q=Wipro+Jaipur+careers" target="_blank" rel="noopener">Wipro</a></li>
+<li><a href="https://www.google.com/search?q=Tata+Consultancy+Services+Jaipur+careers" target="_blank" rel="noopener">Tata Consultancy Services</a></li>
+<li><a href="https://www.google.com/search?q=Genpact+Jaipur+careers" target="_blank" rel="noopener">Genpact</a></li>
+<li><a href="https://www.google.com/search?q=Pratham+Software+%28PSI%29+Jaipur+careers" target="_blank" rel="noopener">Pratham Software (PSI)</a></li>
+<li><a href="https://www.google.com/search?q=A3logics+Jaipur+careers" target="_blank" rel="noopener">A3logics</a></li>
+<li><a href="https://www.google.com/search?q=Deutsche+Bank+%28technology+centre%29+Jaipur+careers" target="_blank" rel="noopener">Deutsche Bank (technology centre)</a></li>
+<li><a href="https://www.google.com/search?q=Nucleus+Software+Jaipur+careers" target="_blank" rel="noopener">Nucleus Software</a></li>
+<li><a href="https://www.google.com/search?q=Matellio+India+Jaipur+careers" target="_blank" rel="noopener">Matellio India</a></li>
+<li><a href="https://www.google.com/search?q=DianApps+Technologies+Jaipur+careers" target="_blank" rel="noopener">DianApps Technologies</a></li>
+<li><a href="https://www.google.com/search?q=Konstant+Infosolutions+Jaipur+careers" target="_blank" rel="noopener">Konstant Infosolutions</a></li>
+<li><a href="https://www.google.com/search?q=Octal+IT+Solution+Jaipur+careers" target="_blank" rel="noopener">Octal IT Solution</a></li>
+<li><a href="https://www.google.com/search?q=The+NineHertz+Jaipur+careers" target="_blank" rel="noopener">The NineHertz</a></li>
+<li><a href="https://www.google.com/search?q=Dev+Technosys+Jaipur+careers" target="_blank" rel="noopener">Dev Technosys</a></li>
+<li><a href="https://www.google.com/search?q=Decipher+Zone+Technologies+Jaipur+careers" target="_blank" rel="noopener">Decipher Zone Technologies</a></li>
+<li><a href="https://www.google.com/search?q=Fexle+Services+Jaipur+careers" target="_blank" rel="noopener">Fexle Services</a></li>
+<li><a href="https://www.google.com/search?q=Orufy+Technologies+Jaipur+careers" target="_blank" rel="noopener">Orufy Technologies</a></li>
+<li><a href="https://www.google.com/search?q=GetePay+Jaipur+careers" target="_blank" rel="noopener">GetePay</a></li>
+<li><a href="https://www.google.com/search?q=WeVOIS+Labs+Jaipur+careers" target="_blank" rel="noopener">WeVOIS Labs</a></li>
+<li><a href="https://www.google.com/search?q=Brudite+Private+Limited+Jaipur+careers" target="_blank" rel="noopener">Brudite Private Limited</a></li>
+</ol>
+
+<h2>Most likely to take a fresher or intern</h2>
+<p>These either run a named trainee or internship route, state publicly that they hire freshers, or posted a fresher-titled Jaipur role during this research.</p>
+<ol class="picks">
+<li><a href="https://www.google.com/search?q=Infosys+Jaipur+careers" target="_blank" rel="noopener">Infosys</a></li>
+<li><a href="https://www.google.com/search?q=Wipro+Jaipur+careers" target="_blank" rel="noopener">Wipro</a></li>
+<li><a href="https://www.google.com/search?q=Tata+Consultancy+Services+Jaipur+careers" target="_blank" rel="noopener">Tata Consultancy Services</a></li>
+<li><a href="https://www.google.com/search?q=Celebal+Technologies+Jaipur+careers" target="_blank" rel="noopener">Celebal Technologies</a></li>
+<li><a href="https://www.google.com/search?q=Girnar+Software+%28CarDekho+%2F+GirnarSoft%29+Jaipur+careers" target="_blank" rel="noopener">Girnar Software (CarDekho / GirnarSoft)</a></li>
+<li><a href="https://www.google.com/search?q=Metacube+Software+Jaipur+careers" target="_blank" rel="noopener">Metacube Software</a></li>
+<li><a href="https://www.google.com/search?q=Dotsquares+Technologies+India+Jaipur+careers" target="_blank" rel="noopener">Dotsquares Technologies India</a></li>
+<li><a href="https://www.google.com/search?q=Cyntexa+Labs+Jaipur+careers" target="_blank" rel="noopener">Cyntexa Labs</a></li>
+<li><a href="https://www.google.com/search?q=Auriga+IT+Consulting+Jaipur+careers" target="_blank" rel="noopener">Auriga IT Consulting</a></li>
+<li><a href="https://www.google.com/search?q=Konstant+Infosolutions+Jaipur+careers" target="_blank" rel="noopener">Konstant Infosolutions</a></li>
+<li><a href="https://www.google.com/search?q=Vidhema+Technologies+Jaipur+careers" target="_blank" rel="noopener">Vidhema Technologies</a></li>
+<li><a href="https://www.google.com/search?q=Ethereal+Softech+Jaipur+careers" target="_blank" rel="noopener">Ethereal Softech</a></li>
+<li><a href="https://www.google.com/search?q=Appic+Software+Jaipur+careers" target="_blank" rel="noopener">Appic Software</a></li>
+<li><a href="https://www.google.com/search?q=Mobzway+Technologies+Jaipur+careers" target="_blank" rel="noopener">Mobzway Technologies</a></li>
+<li><a href="https://www.google.com/search?q=Brudite+Private+Limited+Jaipur+careers" target="_blank" rel="noopener">Brudite Private Limited</a></li>
+<li><a href="https://www.google.com/search?q=eCare+Softech+Jaipur+careers" target="_blank" rel="noopener">eCare Softech</a></li>
+<li><a href="https://www.google.com/search?q=JRG+Software+and+Technologies+Jaipur+careers" target="_blank" rel="noopener">JRG Software and Technologies</a></li>
+<li><a href="https://www.google.com/search?q=Helios+Web+Services+Jaipur+careers" target="_blank" rel="noopener">Helios Web Services</a></li>
+<li><a href="https://www.google.com/search?q=Orufy+Technologies+Jaipur+careers" target="_blank" rel="noopener">Orufy Technologies</a></li>
+<li><a href="https://www.google.com/search?q=Learn2Read+Jaipur+careers" target="_blank" rel="noopener">Learn2Read</a></li>
+<li><a href="https://www.google.com/search?q=Logical+InfoSoft+Jaipur+careers" target="_blank" rel="noopener">Logical InfoSoft</a></li>
+<li><a href="https://www.google.com/search?q=Insolation+Energy+Jaipur+careers" target="_blank" rel="noopener">Insolation Energy</a></li>
+<li><a href="https://www.google.com/search?q=Novixpert+Jaipur+careers" target="_blank" rel="noopener">Novixpert</a></li>
+<li><a href="https://www.google.com/search?q=Creatik+IT+Solutions+Jaipur+careers" target="_blank" rel="noopener">Creatik IT Solutions</a></li>
+<li><a href="https://www.google.com/search?q=Electroglobal+Solutions+Jaipur+careers" target="_blank" rel="noopener">Electroglobal Solutions</a></li>
+</ol>
+
+<h2>Where a cold email is actually worth writing</h2>
+<p>Cold mail works in inverse proportion to company size. At Infosys it goes nowhere; at a forty-person startup it reaches the person who decides. These are the teams small enough, or growing fast enough, that a direct message gets read.</p>
+<ul class="cold">
+<li><a href="https://www.google.com/search?q=Synoriq+Jaipur+careers" target="_blank" rel="noopener">Synoriq</a><span>Small product team, no heavy ATS. A specific note about their lending stack lands.</span></li>
+<li><a href="https://www.google.com/search?q=GetePay+Jaipur+careers" target="_blank" rel="noopener">GetePay</a><span>~58 people. Engineering leads are reachable and there is no formal fresher pipeline to queue in.</span></li>
+<li><a href="https://www.google.com/search?q=Orufy+Technologies+Jaipur+careers" target="_blank" rel="noopener">Orufy Technologies</a><span>Actively posts internships and is small enough that a direct message gets read.</span></li>
+<li><a href="https://www.google.com/search?q=Appcino+Technologies+Jaipur+careers" target="_blank" rel="noopener">Appcino Technologies</a><span>Niche low-code work; few applicants know what Appian is, so a targeted note stands out.</span></li>
+<li><a href="https://www.google.com/search?q=Aramya+Jaipur+careers" target="_blank" rel="noopener">Aramya</a><span>Founded 2022, ~149 staff, recently funded. Fast-growing teams answer cold mail.</span></li>
+<li><a href="https://www.google.com/search?q=WholeSaleBox+Jaipur+careers" target="_blank" rel="noopener">WholeSaleBox</a><span>~58 people. Direct founder/CTO contact is realistic.</span></li>
+<li><a href="https://www.google.com/search?q=Shaadidukaan.com+Jaipur+careers" target="_blank" rel="noopener">Shaadidukaan.com</a><span>~105 people, no formal campus programme.</span></li>
+<li><a href="https://www.google.com/search?q=Affordable+Innovative+Techno+Services+Jaipur+careers" target="_blank" rel="noopener">Affordable Innovative Techno Services</a><span>~24 people. At this size the founder reads everything.</span></li>
+<li><a href="https://www.google.com/search?q=Dawaa+Dost+Jaipur+careers" target="_blank" rel="noopener">Dawaa Dost</a><span>Healthtech with ~218 staff and an in-house build; growing engineering needs.</span></li>
+<li><a href="https://www.google.com/search?q=WeVOIS+Labs+Jaipur+careers" target="_blank" rel="noopener">WeVOIS Labs</a><span>Series A cleantech building its own platform; hires outside campus cycles.</span></li>
+<li><a href="https://www.google.com/search?q=Auriga+IT+Consulting+Jaipur+careers" target="_blank" rel="noopener">Auriga IT Consulting</a><span>Mid-size with a real careers page — a follow-up email after applying is worth sending.</span></li>
+<li><a href="https://www.google.com/search?q=Decipher+Zone+Technologies+Jaipur+careers" target="_blank" rel="noopener">Decipher Zone Technologies</a><span>Java-focused services firm; a portfolio link does more than a CV here.</span></li>
+<li><a href="https://www.google.com/search?q=Ethereal+Softech+Jaipur+careers" target="_blank" rel="noopener">Ethereal Softech</a><span>Publicly states it hires freshers and runs internships.</span></li>
+<li><a href="https://www.google.com/search?q=Appic+Software+Jaipur+careers" target="_blank" rel="noopener">Appic Software</a><span>Publicly states it hires freshers, runs internships and does campus placement.</span></li>
+<li><a href="https://www.google.com/search?q=Brudite+Private+Limited+Jaipur+careers" target="_blank" rel="noopener">Brudite Private Limited</a><span>Runs an explicit internship-to-PPO route — worth asking about the next cohort directly.</span></li>
+</ul>
+
+<h2>Finding the right recruiter yourself</h2>
+<p>This is the part deliberately left out of the table above. Done per company, at the moment you are ready to write to them, it takes about three minutes and gives you a current name rather than a stale one.</p>
+<ol class="steps">
+<li>Open the company's LinkedIn page from the table, click <em>People</em>, and filter by the keyword <em>recruiter</em>, <em>talent</em> or <em>HR</em>. Jaipur-based names surface at the top.</li>
+<li>Cross-check against who actually posted the job. On most LinkedIn listings the poster's name and photo sit under the job title — that person is the one reading applications, and is a better target than a generic HR head.</li>
+<li>For smaller companies in Tier 3, skip HR entirely and find the CTO or engineering lead. At under fifty people they hire directly.</li>
+<li>For the company's official address, use the contact page on its own website rather than a directory. Aggregator sites carry a lot of dead numbers — the 2011-era Jaipur IT directories still circulating are full of them, which is why none were used here.</li>
+<li>Send a connection request with a note, not a cold InMail. A short message naming one specific thing the company builds outperforms a CV attachment by a wide margin.</li>
+</ol>
+
+<h2>What was left out, and why</h2>
+<p>Companies that only show Jaipur because a remote listing is visible there were excluded, as were Delhi, Gurgaon, Noida, Bangalore, Pune, Hyderabad and Mumbai firms with no Jaipur office. Pure digital-marketing and SEO agencies were dropped even when Jaipur-verified, since they do not hire software engineers. Several names circulating on older Jaipur IT directories were also dropped: those lists date to around 2011 and their phone numbers and contacts no longer resolve.</p>
+<p>Two entries deserve a specific caveat. <strong>DealShare</strong> was founded in Jaipur but is now headquartered in Bengaluru, so it is not in the list. <strong>Tata Consultancy Services</strong> is included on a lower grade of evidence than the other large employers — its Jaipur presence is widely reported but was not confirmed here against a primary source, so verify the delivery-centre address before you count on it.</p>
+
+<footer>
+Compiled September 2026 from Mahindra World City and Rajasthan SEZ records, TechBehemoths and The Manifest verified-company directories, Inc42 Datalabs funding data, Indeed and Glassdoor Jaipur listings, and company career pages. Hiring status changes weekly — use the per-company links rather than trusting any static list, including this one.
+</footer>
+
+</div>
+<script>
+(function () {
+  var q = document.getElementById('q');
+  var count = document.getElementById('count');
+  var btns = document.querySelectorAll('.controls button');
+  var rows = document.querySelectorAll('tbody tr');
+  var filter = 'all';
+
+  function apply() {
+    var term = q.value.trim().toLowerCase();
+    var shown = 0;
+    rows.forEach(function (r) {
+      var okName = !term || r.dataset.name.indexOf(term) !== -1;
+      var okFit = filter === 'all' || r.dataset.fit === filter;
+      var show = okName && okFit;
+      r.classList.toggle('hidden', !show);
+      if (show) shown++;
+    });
+    count.textContent = shown + ' of ' + rows.length + ' shown';
+  }
+
+  q.addEventListener('input', apply);
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      filter = b.dataset.f;
+      btns.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      apply();
+    });
+  });
+  apply();
+})();
+</script>
+</body>
+</html>
