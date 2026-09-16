@@ -60,3 +60,11 @@ This project is for informational and research use. Please check the content bef
 ## Author / Context
 
 This project was created as a curated Jaipur software employer directory for job research and company discovery.
+
+## Created by
+
+Mann Vijay
+
+- LinkedIn: https://linkedin.com/in/mannsvijay
+- LeetCode: https://leetcode.com/u/mannsvijay
+- GitHub: https://github.com/mannsvijay/
